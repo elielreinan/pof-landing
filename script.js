@@ -5,8 +5,20 @@ if (menuButton && menu) {
   menuButton.addEventListener("click", () => {
     const isOpen = menuButton.getAttribute("aria-expanded") === "true";
     menuButton.setAttribute("aria-expanded", String(!isOpen));
-    menuButton.querySelector(".menu-toggle-label").textContent = isOpen ? "Abrir menu" : "Fechar menu";
+    const label = isOpen ? "Abrir menu" : "Fechar menu";
+    menuButton.setAttribute("aria-label", label);
+    menuButton.querySelector(".menu-toggle-label").textContent = label;
     menu.classList.toggle("is-open", !isOpen);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Abrir menu");
+      menuButton.querySelector(".menu-toggle-label").textContent = "Abrir menu";
+      menu.classList.remove("is-open");
+      menuButton.focus();
+    }
   });
 
   menu.addEventListener("click", (event) => {
