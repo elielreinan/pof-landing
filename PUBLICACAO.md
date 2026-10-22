@@ -12,8 +12,9 @@ manter a pasta do projeto Godot no servidor.
    servidor de aplicação; hospedagem estática com HTTPS é suficiente.
 3. Antes de divulgar, substitua os arquivos em `downloads` pelo APK assinado e
    pelo instalador `.exe` da versão lançada. O APK deve se chamar `Path of
-   Flames.apk`; mantenha os nomes dos arquivos sincronizados com os links e
-   versões exibidos em `index.html`.
+   Flames.apk` e use um código de versão maior que o instalado; mantenha os
+   nomes dos arquivos sincronizados com os links e versões exibidos em
+   `index.html`.
 4. Teste a página publicada em computador e celular e confirme que os dois
    downloads começam corretamente.
 
