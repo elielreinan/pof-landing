@@ -10,9 +10,10 @@ manter a pasta do projeto Godot no servidor.
    preservando a estrutura de `assets` e `downloads`.
 2. Configure `index.html` como página inicial. O site não requer build ou
    servidor de aplicação; hospedagem estática com HTTPS é suficiente.
-3. Antes de divulgar, substitua os APK e ZIP em `downloads` pelas exportações da
-   versão que será lançada. Mantenha os nomes dos arquivos sincronizados com os
-   links e versões exibidos em `index.html`.
+3. Antes de divulgar, substitua os arquivos em `downloads` pelo APK assinado e
+   pelo instalador `.exe` da versão lançada. O APK deve se chamar `Path of
+   Flames.apk`; mantenha os nomes dos arquivos sincronizados com os links e
+   versões exibidos em `index.html`.
 4. Teste a página publicada em computador e celular e confirme que os dois
    downloads começam corretamente.
 
